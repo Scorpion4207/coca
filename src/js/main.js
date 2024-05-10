@@ -1,5 +1,2 @@
-import "../css/main.css";
-import {foo, bar} from "./counter";
+import '../css/main.css';
 
-console.log(foo);
-bar();
