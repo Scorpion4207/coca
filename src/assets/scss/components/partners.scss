@@ -1,8 +1,8 @@
 .partners {
-  padding: 86px 0;
+  padding: 108px 0;
 
   @include mobile {
-    padding: 66px 0;
+    padding: 76px 0;
   }
 
   &__inner {
@@ -25,26 +25,48 @@
 
   &__num {
     font-weight: 600;
-line-height: 120%;
-letter-spacing: -0.04em;
-color: var(--neutral-color-100);
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
   }
 
   &__list {
     @include flex-all-center;
-    gap:10px 30px;
+    gap: 10px 30px;
     flex-wrap: wrap;
 
     @include mobile {
-      gap: 10px;
+      display: none;
     }
   }
 
   &__item {
     @include flex-all-center;
     border-radius: 16px;
-width: 160px;
-height: 90px;
-background-color: #fff;
+    width: 160px;
+    height: 90px;
+    background-color: #fff;
+  }
+
+  &__slide {
+    display: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 16px;
+    height: 90px !important;
+    max-width: 160px;
+    background-color: #fff;
+
+    @include mobile {
+      display: flex !important;
+    }
+  }
+}
+
+.swiper{
+  &-pagination{
+    &-bullet{
+      background-color: var(--neutral-color-100) !important;
+    }
   }
 }
