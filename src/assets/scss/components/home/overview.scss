@@ -41,9 +41,9 @@
     flex-wrap: wrap;
 
     @include tablet {
+      gap: 40px;
       flex-direction: column;
       align-items: center;
-      gap: 40px;
     }
   }
 
@@ -74,7 +74,7 @@
     &-descr {
       font-weight: 500;
       line-height: 162%;
-      color: #7e8492;
+      color: var(--neutral-color-150);
     }
   }
 

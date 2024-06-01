@@ -1,31 +1,9 @@
 import Swiper from 'swiper';
-import { Autoplay, Navigation, Pagination, Scrollbar} from 'swiper/modules';
+import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-export const useInsightSlider = () => {
-  new Swiper('.insight__slider', {
-    slidesPerView: 1,
-    spaceBetween: 32,
-    loop: true,
-    
-    scrollbar: {
-      el: '.insight__scrollbar',
-      draggable: true ,
-    },
-    breakpoints: {
-      576: {
-        slidesPerView: 1.5,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-    },
-    modules: [Navigation, Scrollbar],
-  });
-};
 
 export const usePartnersSlider = () => {
   new Swiper('.partners__slider', {
@@ -42,4 +20,40 @@ export const usePartnersSlider = () => {
       el: '.partners__pagibation',
     },
   });
-}
+};
+
+export const useInsightSlider = () => {
+  new Swiper('.insight__slider', {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+
+    scrollbar: {
+      el: '.insight__scrollbar',
+      draggable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1.5,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+    },
+    modules: [Navigation, Scrollbar],
+  });
+};
+
+export const useTestimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+
+    navigation: {
+      prevEl: '.testimonials__btn--prev',
+      nextEl: '.testimonials__btn--next',
+    },
+  });
+};
