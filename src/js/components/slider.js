@@ -1,9 +1,16 @@
 import Swiper from 'swiper';
-import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  EffectFade,
+} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/effect-fade';
 
 export const usePartnersSlider = () => {
   new Swiper('.partners__slider', {
@@ -11,7 +18,7 @@ export const usePartnersSlider = () => {
     spaceBetween: 18,
     centeredSlides: true,
     loop: true,
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Pagination, Autoplay],
     autoplay: {
       delay: 2000,
     },
@@ -40,20 +47,27 @@ export const useInsightSlider = () => {
         slidesPerView: 2,
       },
     },
-    modules: [Navigation, Scrollbar],
+    modules: [ Scrollbar],
   });
 };
 
 export const useTestimonialsSlider = () => {
   new Swiper('.testimonials__slider', {
-    modules: [Navigation],
+    modules: [EffectFade, Navigation ],
     slidesPerView: 1,
     spaceBetween: 32,
     loop: true,
-
+    
     navigation: {
       prevEl: '.testimonials__btn--prev',
       nextEl: '.testimonials__btn--next',
     },
+
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+      crossFadeThreshold: 0.2,
+    },
+
   });
 };
