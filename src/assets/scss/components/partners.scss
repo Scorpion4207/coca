@@ -1,8 +1,12 @@
+.conatainer {
+  max-width: 1050px;
+}
+
 .partners {
   padding: 108px 0;
 
   @include mobile {
-    padding: 76px 0;
+    padding: 56px 0;
   }
 
   &__inner {
@@ -64,6 +68,10 @@
 }
 
 .swiper{
+  &-wrapper {
+    margin-bottom: 30px;
+  }
+
   &-pagination{
     &-bullet{
       background-color: var(--neutral-color-100) !important;
