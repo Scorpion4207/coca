@@ -1,6 +1,6 @@
 .get-started {
   padding: 0 0 120px;
-  
+
   &__container {
     position: relative;
     display: flex;
@@ -41,7 +41,7 @@
       font-weight: 600;
       line-height: 122%;
       letter-spacing: -0.02em;
-      color: var(--neutral-color-100);
+      color: #1d1e25;
     }
 
     &-descr {
@@ -94,5 +94,11 @@
         display: none;
       }
     }
+  }
+
+  &__btn {
+    padding: 16px 32px;
+    color: #fff;
+    background: #1d1e25;
   }
 }

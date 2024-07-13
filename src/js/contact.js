@@ -1,4 +1,4 @@
-import '../assets/scss/contact.scss';
+import '/scss/contact.scss';
 
 import { useTheme } from './components/theme.js';
 import { headerScroll } from './components/header.js';
